@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class SpecialMultTable {
+   public static void main(String[] args) {
+     Scanner scnr = new Scanner(System.in);
+     
+     System.out.println("UTSA - Fall 2021 - CS1083 - Section - Prj 1 - written by Amos Munteanu - roj198");
+     System.out.println();
+     System.out.print("Input base number (bn): ");
+     int bn = scnr.nextInt();
+     System.out.println();
+     System.out.print("Input first number (fn): ");
+     int fn = scnr.nextInt();
+     System.out.println();
+     System.out.print("Input last number (ln): ");
+     int ln = scnr.nextInt();
+     System.out.println();
+     System.out.print("Input the increasement (inc): "); //code grabs users input to use in the program
+     int inc = scnr.nextInt();
+     System.out.println();
+     System.out.print("Input multiple(s) to skip (ms): "); 
+     int ms = scnr.nextInt();
+     System.out.println();
+     
+     System.out.println("-Special Multiplication Table-");
+     System.out.println();
+     
+     System.out.println("Value    Results");
+     for (int i = fn; i <= ln; i = i + inc){
+     
+       int v = i * bn;
+       if((v % ms) == 0){
+         System.out.println( i + "       " + "-> Skipped - " + v);
+       }
+         else{
+       System.out.println(i + "       " + v);
+       }
+       }
+     
+     System.out.println("");
+     System.out.println("Thank you for using this software, Amos Munteanu");
+       
+   }
+}
+
